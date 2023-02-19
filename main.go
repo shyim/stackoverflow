@@ -13,7 +13,7 @@ import (
 
 func main() {
 	ctx := context.Background()
-	conn, err := pgx.Connect(ctx, "postgres://stackoverflow:stackoverflow@100.111.38.18:5432/stackoverflow")
+	conn, err := pgx.Connect(ctx, "postgres://stackoverflow:stackoverflow@localhost:5432/stackoverflow")
 
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Unable to connect to database: %v\n", err)
